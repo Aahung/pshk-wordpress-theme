@@ -1,5 +1,5 @@
 (function($) {
 
-	// all Javascript code goes here
+	$(document).foundation();
 
 })(jQuery);

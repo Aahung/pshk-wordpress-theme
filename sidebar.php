@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package _mbbasetheme
+ * @package _pshktheme
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

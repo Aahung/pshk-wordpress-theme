@@ -4,18 +4,17 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package _mbbasetheme
+ * @package _pshktheme
  */
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<p class="copyright">&copy; <?php echo date( "Y" ); echo " "; bloginfo( 'name' ); ?></p>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<div class="row">
+	<footer>
+		<div class="text-center">
+			<small class="copyright">&copy; <?php echo date( "Y" ); echo " "; ?>Physical Society of Hong Kong (PSHK)</small>
+		</div>
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 

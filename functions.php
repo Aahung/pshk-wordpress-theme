@@ -1,8 +1,8 @@
 <?php
 /**
- * _mbbasetheme functions and definitions
+ * _pshktheme functions and definitions
  *
- * @package _mbbasetheme
+ * @package _pshktheme
  */
 
 /****************************************
@@ -78,4 +78,18 @@ function mb_add_post_type_caps() {
 add_filter( 'wpseo_metabox_prio', 'mb_filter_yoast_seo_metabox' );
 function mb_filter_yoast_seo_metabox() {
 	return 'low';
+}
+
+
+/**
+ * Customize top bar navigation item
+ */
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+    function start_el ( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+        
+    }
+
+    function end_el( &$output, $item, $depth = 0, $args = array() ) {
+
+    }
 }

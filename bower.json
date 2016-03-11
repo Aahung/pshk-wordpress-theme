@@ -1,0 +1,29 @@
+{
+  "name": "PSHK",
+  "description": "Physics Society of Hong Konh",
+  "main": "",
+  "authors": [
+    "aaHung <Landxh@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "pshk.org.hk",
+  "moduleType": [
+    "globals"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.2.0",
+    "motion-ui": "~1.2.2",
+    "jquery": "~1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/js/vendor",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "jquery": "~1"
+  }
+}

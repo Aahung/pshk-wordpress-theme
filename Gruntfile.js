@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 tasks: ['jshint', 'uglify']
             },
             images: {
-                files: ['assets/images/**/*.{png,jpg,gif}'],
+                files: ['assets/images/source/**/*.{png,jpg,gif}'],
                 tasks: ['imagemin']
             }
         },
@@ -27,10 +27,10 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     style: 'expanded',
+                    loadPath: ['assets/js/vendor/foundation-sites/scss', 'assets/js/vendor/motion-ui/src', 'assets/styles/_settings.scss']
                 },
                 files: {
-                    'assets/styles/build/style.css': 'assets/styles/style.scss',
-                    'assets/styles/build/editor-style.css': 'assets/styles/editor-style.scss'
+                    'assets/styles/build/style.css': 'assets/styles/app.scss'
                 }
             }
         },
@@ -99,7 +99,10 @@ module.exports = function(grunt) {
                         'assets/js/source/plugins.js',
                         'assets/js/vendor/navigation.js',
                         'assets/js/vendor/skip-link-focus-fix.js',
-                        // 'assets/js/vendor/yourplugin/yourplugin.js',
+                        'assets/js/vendor/jquery/dist/jquery.min.js',
+                        'assets/js/vendor/motion-ui/dist/motion-ui.min.js',
+                        'assets/js/vendor/what-input/what-input.min.js',
+                        'assets/js/vendor/foundation-sites/dist/foundation.min.js',
                     ]
                 }
             },
@@ -128,7 +131,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'assets/images/',
-                    src: ['**/*.{png,jpg,gif}'],
+                    src: ['**/*.{png,jpg,gif,ico}'],
                     dest: 'assets/images/'
                 }]
             }
@@ -138,12 +141,12 @@ module.exports = function(grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src : ['style.css', 'assets/js/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+                    src : ['assets/styles/build/*.css', 'assets/js/*.js', 'assets/images/min/**/*.{png,jpg,jpeg,gif,webp,svg}']
                 },
                 options: {
                     proxy: "local.dev",
                     watchTask: true,
-                    browser: "google chrome"
+                    browser: "safari"
                 }
             }
         },
@@ -159,8 +162,8 @@ module.exports = function(grunt) {
             },
             staging: {
                  options: {
-                    dest: "~/path/to/theme",
-                    host: "user@host.com"
+                    dest: "/var/www/html/wp-content/themes/pshk",
+                    host: "ubuntu@ec2-52-37-129-241.us-west-2.compute.amazonaws.com"
                 }
             },
             production: {
@@ -180,6 +183,6 @@ module.exports = function(grunt) {
     grunt.renameTask('rsync', 'deploy');
 
     // register task
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'deploy:staging']);
 
 };

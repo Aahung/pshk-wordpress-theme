@@ -8,11 +8,11 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package _mbbasetheme
+ * @package _pshktheme
  */
 
 get_header(); ?>
-
+	
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php _mbbasetheme_paging_nav(); ?>
+			<?php _pshktheme_paging_nav(); ?>
 
 		<?php else : ?>
 
