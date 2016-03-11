@@ -10,7 +10,7 @@
 
 <div class="row">
 	<footer>
-		<div class="text-center">
+		<div class="large-12 columns text-center">
 			<small class="copyright">&copy; <?php echo date( "Y" ); echo " "; ?>Physical Society of Hong Kong (PSHK)</small>
 		</div>
 	</footer>

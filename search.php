@@ -7,9 +7,8 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+<div id="content" class="large-8 columns">	
+	<div class="text-center">
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -37,9 +36,11 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
+	</div>
+</div>
+<div class="large-4 columns">
+	<?php get_sidebar(); ?>
+</div>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>

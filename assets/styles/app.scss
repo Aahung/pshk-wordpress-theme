@@ -66,3 +66,17 @@
 .widget input.button {
     width: 100%;
 }
+
+.columns {
+    .prefix {
+        padding-right: 1px;
+    }
+    .postfix {
+        padding-left: 1px;
+    }
+}
+
+footer div {
+    border-top: 1px $light-gray solid;
+    padding: $global-margin;
+}
