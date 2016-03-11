@@ -48,3 +48,21 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// change top bar link color
+.top-bar li > a {
+    color: lighten($black, 40%);
+    transition: 0.5s ease color;
+}
+
+.top-bar li:hover > a {
+    color: $black;
+}
+
+#sidebar {
+    margin-top: $global-margin;
+}
+
+.widget input.button {
+    width: 100%;
+}

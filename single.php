@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div id="content" class="large-9 columns">	
+<div id="content" class="large-8 columns">	
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -21,7 +21,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 </div>
-<div class="large-3 columns">
+<div class="large-4 columns">
 	<?php get_sidebar(); ?>
 </div>
 

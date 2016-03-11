@@ -9,12 +9,12 @@
 
 get_header(); ?>
 
-<div id="content" class="large-9 columns">	
+<div id="content" class="large-8 columns">	
 	<div class="text-center">
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/pshk-homepage.jpg">
 	</div>
 </div>
-<div class="large-3 columns">
+<div class="large-4 columns">
 	<?php get_sidebar(); ?>
 </div>
 
